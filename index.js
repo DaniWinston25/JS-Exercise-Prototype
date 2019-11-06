@@ -41,8 +41,8 @@ Airplane.prototype.land = function () {
 */
 
 function Person(name, age) {
-  name = this.name;
-  age = this.age;
+ this.name = name;
+  this.age = age;
   this.stomach = [];
 }
 Person.prototype.eat = function (someFood) {
