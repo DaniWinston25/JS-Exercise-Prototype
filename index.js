@@ -39,9 +39,19 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
-
+function Person(name, age) {
+  name = this.name;
+  age = this.age;
+  // let stomach = this.stomach[];
 }
+Person.prototype.eat = function () {
+// /;
+};
+Person.prototype.poop = function () {
+  this.isFlying = false;
+};
+
+// }
 
 /*
   TASK 2
@@ -76,10 +86,10 @@ function Baby() {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Global Binding: occurs on the whole of the console object. Its what makes up everything in Javascript if you were to type "this" in the console.
+  2. Implicit Binding: occurs when the object attached to the function is called, it is in common in dot and the "this" is everything left of the dot.
+  3. Explicit Binding: created when the .call or .apply method is being used. "this" refers to the objects explicit role.
+  4. New Binding: done when there is a constructor function, uses the keyword new to help create a new constructor function which in turn "this" points to. 
 */
 
 
