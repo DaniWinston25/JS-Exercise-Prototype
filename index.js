@@ -88,10 +88,10 @@ this.odometer+1;
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby(name, age) {
-name = this.name;
-age = this.age;
-const favoriteToy = this.favoriteToy;
+function Baby(name, age, favoriteToy) {
+  this.name = name;
+this.age = age ;
+this.favoriteToy = favoriteToy;
 
 Baby.prototype = Object.create(Person.prototype);
 
