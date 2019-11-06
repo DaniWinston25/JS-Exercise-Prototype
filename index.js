@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*
   EXAMPLE TASK:
     - Write an Airplane constructor that initializes `name` from an argument.
@@ -40,18 +41,21 @@ Airplane.prototype.land = function () {
 */
 
 function Person(name, age) {
-  name = this.name;
+  name =this.name;
   age = this.age;
-  // let stomach = this.stomach[];
+  this.stomach[0];
 }
-Person.prototype.eat = function () {
-// /;
-};
-Person.prototype.poop = function () {
-  this.isFlying = false;
+Person.prototype.eat = function (someFood) {
+  if (this.stomach.length > 10);
+  return this.stomach.push(someFood);
 };
 
-// }
+Person.prototype.poop = function () {
+ this.stomach.pop();
+};
+Person.prototype.toString = function() {
+  return `${this.name}, ${this.age}`;
+}
 
 /*
   TASK 2
@@ -67,8 +71,14 @@ Person.prototype.poop = function () {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon) {
+  model = this.model;
+  milesPerGallon = this.milesPerGallon;
 
+Car.prototype.fill = function() {
+this.tank++;
+this.odometer+1;
+}
 }
 
 /*
@@ -78,7 +88,7 @@ function Car() {
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
+function Baby(name, age) {
 
 }
 
