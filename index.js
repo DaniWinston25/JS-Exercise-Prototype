@@ -43,7 +43,7 @@ Airplane.prototype.land = function () {
 function Person(name, age) {
   name =this.name;
   age = this.age;
-  this.stomach[array];
+  this.stomach;
 }
 Person.prototype.eat = function (someFood) {
   if (this.stomach.length > 10);
@@ -89,7 +89,15 @@ this.odometer+1;
         + Should return a string "Playing with x", x being the favorite toy.
 */
 function Baby(name, age) {
+name = this.name;
+age = this.age;
+const favoriteToy = this.favoriteToy;
 
+Baby.prototype = Object.create(Person.prototype);
+
+Baby.prototype.play = function(x,y) {
+  return x+y;
+}
 }
 
 /* 
