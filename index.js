@@ -72,8 +72,8 @@ Person.prototype.toString = function () {
 */
 
 function Car(model, milesPerGallon) {
-  model = this.model;
-  milesPerGallon = this.milesPerGallon;
+ this.model = model;
+ this.milesPerGallon = milesPerGallon;
 
 Car.prototype.fill = function() {
 this.tank++;
