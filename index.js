@@ -89,14 +89,14 @@ this.odometer+1;
         + Should return a string "Playing with x", x being the favorite toy.
 */
 function Baby(name, age, favoriteToy) {
-  this.name = name;
+this.name = name;
 this.age = age ;
 this.favoriteToy = favoriteToy;
 
 Baby.prototype = Object.create(Person.prototype);
 
-Baby.prototype.play = function(x,y) {
-  return x+y;
+Baby.prototype.play = function() {
+  return `playing with ${this.favoriteToy}`;
 }
 }
 
