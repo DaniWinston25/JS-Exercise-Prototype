@@ -43,7 +43,7 @@ Airplane.prototype.land = function () {
 function Person(name, age) {
   name =this.name;
   age = this.age;
-  this.stomach[0];
+  this.stomach[array];
 }
 Person.prototype.eat = function (someFood) {
   if (this.stomach.length > 10);
