@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*
   EXAMPLE TASK:
     - Write an Airplane constructor that initializes `name` from an argument.
@@ -39,8 +40,21 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
+function Person(name, age) {
+ this.name = name;
+  this.age = age;
+  this.stomach = [];
+}
+Person.prototype.eat = function (someFood) {
+  if (this.stomach.length > 10);
+  return this.stomach.push(someFood);
+};
 
+Person.prototype.poop = function () {
+ this.stomach.pop();
+};
+Person.prototype.toString = function () {
+  return `${this.name}, ${this.age}`;
 }
 
 /*
@@ -57,8 +71,15 @@ function Person() {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon) {
+ this.model = model;
+ this.milesPerGallon = milesPerGallon;
 
+Car.prototype.fill = function(gallons) {
+this.tank = tank
+this.gallons = gallons;
+return this.tank + this.gallons;
+}
 }
 
 /*
@@ -68,18 +89,29 @@ function Car() {
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
+function Baby(name, age, favoriteToy) {
+this.name = name;
+this.age = age ;
+this.favoriteToy = favoriteToy;
 
+Baby.prototype = Object.create(Person.prototype);
+
+Baby.prototype.play = function() {
+  return `playing with ${this.favoriteToy}`;
+}
 }
 
 /* 
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Global Binding: occurs on the whole of the console object. Its what makes up everything in Javascript if you were to type "this" in the console.
+
+  2. Implicit Binding: occurs when the object attached to the function is called, it is in common in dot and the "this" is everything left of the dot.
+
+  3. Explicit Binding: created when the .call or .apply method is being used. "this" refers to the objects explicit role.
+
+  4. New Binding: done when there is a constructor function, uses the keyword new to help create a new constructor function which in turn "this" points to. 
 */
 
 
